@@ -1,0 +1,21 @@
+body {
+  background: #0f0c29;
+  background: -webkit-linear-gradient(to left, #24243e, #302b63, #0f0c29);
+  background: linear-gradient(to left, #24243e, #302b63, #0f0c29);
+}
+
+.center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+  text-align: center;
+}
+
+.calculator {
+  width: 30vw;
+  height: 70vh;
+  background: #fff;
+  border-radius: 1rem;
+}
