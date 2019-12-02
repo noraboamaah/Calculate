@@ -1,7 +1,7 @@
 import React from 'react';
 import Button from './Button';
 
-const CalcualtorButtons = () => {
+const CalcualtorButtons = props => {
   return (
     <div style={styles}>
       <>

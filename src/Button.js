@@ -14,7 +14,8 @@ const styles = {
     alignItems: 'center',
     justifyContent: 'center',
     textAlign: 'center',
-    borderRadius: '0.5rem'
+    borderRadius: '0.5rem',
+    fontWeight: 'bold'
   },
 
   operator: {
@@ -22,11 +23,13 @@ const styles = {
     margin: '0.2vw',
     height: '10vh',
     background: '#6D6D7F',
+    color: '#fff',
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
     textAlign: 'center',
-    borderRadius: '0.5rem'
+    borderRadius: '0.5rem',
+    fontWeight: 'bold'
   }
 };
 
