@@ -7,7 +7,7 @@ A simple caalculator built with React and React Hooks
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
 
 ## Deployment
-[VisitSite](url) - take a look at it.
+[VisitSite](https://calculatewithreact.netlify.com/) - take a look at it.
 
 ### Installing
 
