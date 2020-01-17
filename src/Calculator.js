@@ -1,53 +1,45 @@
-import React, { Component } from 'react';
+import React, { useState } from 'react';
 import TextArea from './TextArea';
 import CalcualtorButtons from './CalcualtorButtons';
 
-class Calcualtor extends Component {
-  state = {
-    result: '',
-    equalsPressed: false
-  };
+const Calculator = () => {
+  const [result, setResult] = useState('');
+  const [equalsPressed, setEqualsPressed] = useState(false);
 
-  buttonClicked = buttonValue => {
+  const calculate = () => {
+    setResult(eval(result));
+  };
+  const buttonClicked = buttonValue => {
     switch (buttonValue) {
       case '=':
-        this.calculate();
-        this.setState({ equalsPressed: true });
+        calculate();
+        setEqualsPressed(true);
         break;
       case 'DEL':
-        this.setState({ result: '' });
+        setResult('');
         break;
       case '/':
       case '+':
       case '-':
       case '*':
-        this.setState({ result: this.state.result + buttonValue, equalsPressed: false });
+        setResult(result + buttonValue);
+        setEqualsPressed(false);
         break;
       default:
-        if (this.state.equalsPressed) {
-          this.setState({ result: '', equalsPressed: false }, () => {
-            this.setState({ result: this.state.result + buttonValue });
-          });
+        if (equalsPressed) {
+          setResult('' + buttonValue);
+          setEqualsPressed(false);
           return;
         }
-        this.setState({ result: this.state.result + buttonValue });
+        setResult(result + buttonValue);
     }
   };
+  return (
+    <div className="calculator">
+      <TextArea result={result} />
+      <CalcualtorButtons buttonClicked={buttonClicked} />
+    </div>
+  );
+};
 
-  calculate = () => {
-    this.setState({
-      result: eval(this.state.result)
-    });
-  };
-
-  render() {
-    return (
-      <div className="calculator">
-        <TextArea result={this.state.result} />
-        <CalcualtorButtons buttonClicked={this.buttonClicked} />
-      </div>
-    );
-  }
-}
-
-export default Calcualtor;
+export default Calculator;
