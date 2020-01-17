@@ -1,12 +1,22 @@
 import React from 'react';
 
 const Button = props => {
-  return <div style={props.itemType === 'number' ? styles.number : styles.operator}>{props.item}</div>;
+  const buttonClicked = e => {
+    props.onClick(e.target.value);
+  };
+  return (
+    <button
+      value={props.value}
+      onClick={buttonClicked}
+      style={props.itemType === 'number' ? styles.number : styles.operator}
+    >
+      {props.value}
+    </button>
+  );
 };
-
 const styles = {
   number: {
-    width: '20%',
+    width: '5vw',
     margin: '0.2vw',
     height: '10vh',
     background: '#D6D6FA',
@@ -15,11 +25,12 @@ const styles = {
     justifyContent: 'center',
     textAlign: 'center',
     borderRadius: '0.5rem',
-    fontWeight: 'bold'
+    fontWeight: 'bold',
+    fontSize: 16
   },
 
   operator: {
-    width: '20%',
+    width: '5vw',
     margin: '0.2vw',
     height: '10vh',
     background: '#6D6D7F',
@@ -29,7 +40,8 @@ const styles = {
     justifyContent: 'center',
     textAlign: 'center',
     borderRadius: '0.5rem',
-    fontWeight: 'bold'
+    fontWeight: 'bold',
+    fontSize: 16
   }
 };
 

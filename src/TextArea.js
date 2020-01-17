@@ -1,13 +1,10 @@
-import React, { useState } from 'react';
+import React from 'react';
 
 const TextArea = props => {
-  const [input, setInput] = useState('');
-  const [output, setOutput] = useState('');
   return (
     <>
       <div style={styles.textArea}>
-        <p style={styles.inputNumbers}>{input}</p>
-        <p style={styles.outputNumbers}>{output}</p>
+        <p style={styles.inputNumbers}>{props.result}</p>
       </div>
     </>
   );
@@ -27,15 +24,6 @@ const styles = {
     margin: 0,
     textAlign: 'right',
     padding: '30px 40px 10px 40px',
-    fontWeight: 'bold',
-    fontSize: '24px'
-  },
-  outputNumbers: {
-    marginBlockStart: 0,
-    marginBlockEnd: 0,
-    margin: 0,
-    textAlign: 'right',
-    padding: '0px 40px 40px 30px',
     fontWeight: 'bold',
     fontSize: '24px'
   }
