@@ -6,9 +6,6 @@ A simple calculator built with React and React Hooks
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
 
-## Deployment
-[VisitSite](https://calculatewithreact.netlify.com/) - take a look at it.
-
 ### Installing
 
 A step by step that will tell you how to get a development environment running
@@ -19,6 +16,9 @@ A step by step that will tell you how to get a development environment running
 
 ## How it works
 Just like a normal calculator, click on some numbers and some operations to get your solution computed.
+
+## Deployment
+[VisitSite](https://calculatewithreact.netlify.com/) - take a look at it.
 
 ## Built With
 
