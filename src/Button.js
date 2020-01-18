@@ -1,21 +1,27 @@
 import React from 'react';
+import { StyleRoot } from 'radium';
 
 const Button = props => {
   const buttonClicked = e => {
     props.onClick(e.target.value);
   };
   return (
-    <button
-      value={props.value}
-      onClick={buttonClicked}
-      style={props.itemType === 'number' ? styles.number : styles.operator}
-    >
-      {props.value}
-    </button>
+    <StyleRoot>
+      <button
+        value={props.value}
+        onClick={buttonClicked}
+        style={props.itemType === 'number' ? styles.number : styles.operator}
+      >
+        {props.value}
+      </button>
+    </StyleRoot>
   );
 };
 const styles = {
   number: {
+    '@media screen and (min-width: 300px) and (max-width: 700px)': {
+      width: '18vw'
+    },
     width: '5vw',
     margin: '0.2vw',
     height: '10vh',
@@ -30,6 +36,9 @@ const styles = {
   },
 
   operator: {
+    '@media screen and (min-width: 300px) and (max-width: 700px)': {
+      width: '18vw'
+    },
     width: '5vw',
     margin: '0.2vw',
     height: '10vh',

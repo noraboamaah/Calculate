@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "mathjs": "^6.2.5",
+    "radium": "^0.26.0",
     "react": "^16.11.0",
     "react-dom": "^16.11.0",
     "react-scripts": "^3.3.0"
